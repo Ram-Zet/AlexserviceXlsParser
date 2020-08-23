@@ -9,7 +9,6 @@ import ru.alexservice34.xlsparser.menu.MainMenu;
 public class XlsparserApplication {
 
     public static void main(String[] args) {
-
         ConfigurableApplicationContext applicationContext = SpringApplication.run(XlsparserApplication.class, args);
         applicationContext.getBean(MainMenu.class).startMenu();
     }

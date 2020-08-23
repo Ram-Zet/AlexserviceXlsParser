@@ -27,6 +27,9 @@ dependencies {
     }
 
     compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+    compile group: 'org.apache.poi', name: 'poi', version: '4.1.2'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.2'
+    compile group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '4.1.2'
 }
 
 test {

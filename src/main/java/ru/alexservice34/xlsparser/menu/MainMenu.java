@@ -62,7 +62,9 @@ public class MainMenu {
         }
         try {
             List<Path> xlsFiles = Files.list(xlsFolder)
-                    .filter(filePath -> filePath.endsWith(".xls") || filePath.endsWith(".xlsx"))
+                    .filter(filePath ->{
+                        System.out.println(filePath.toUri());
+                        return filePath.toUri().toString().endsWith(".xls") || filePath.toString().endsWith("xlsx");})
                     .collect(Collectors.toList());
             if (xlsFiles.isEmpty()) {
                 consoleHelper.print(XLS_FILE_NOT_FOUND);
